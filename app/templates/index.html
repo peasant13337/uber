@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />	<!-- render page in mobile browsers correctly -->
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">	<!-- render page in mobile browsers correctly -->
+	<link rel="stylesheet" type="text/css" href="/static/main.css"/>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIIs5TVvW_8s6eqpFhX-ZvQJtVkrBZvno&sensor=false"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/frameworks/underscore-min.js"></script>
+	<script type="text/javascript" src="/static/frameworks/backbone-min.js"></script>
+	<script type="text/javascript" src="/static/maps.js"></script>	<!-- google map functions -->
+	<script type="text/javascript" src="/static/main.js"></script>	<!-- main javascript starts execution in here -->
+</head>
+<body>
+	<div id="header">[map]</div>
+	<div id="map-canvas"></div>
+
+	<div class="column">
+		<div class="content">
+			<div id="searchForm">
+				<div class="title">Search</div>
+
+				<div id="searchContainer">
+					<div id="searchAddressContainer">
+						<input type="text" id="searchAddress" value="" placeholder="Address"/>
+						<img id="searchBtn" src="/static/images/search-icon.png"/>
+					</div>
+
+					<input type="text" id="nickname" value="" placeholder="Nickname"/>
+					<button id="saveAddress" class="actionButton gradientBlue">Save Address</button>
+					<button id="startEdit" class="actionButton gradientBlue">Edit</button>
+					<button id="stopEdit" class="actionButton gradientBlue">Stop Edit</button>
+					<button id="updateAddress" class="actionButton gradientBlue">Update Address</button>
+					<button id="deleteAddress" class="actionButton gradientRed">Delete</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="column">
+		<div class="content">
+			<div class="title">Locations</div>
+			<div id="addresses"/>
+		</div>
+	</div>
+
+	<div class="clear"></div>
+
+	<!-- underscore Address template -->
+	<script id="addressTemplate" type="text/html">
+		<a id="model-<%= id %>" class="address gradientGreen" title="[<%= nickname %>] <%= address %>" href="javascript:void(0);"><span>[<%= nickname %>]</span> <%= address %></a>
+	</script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,183 @@
+@font-face {
+	font-family: UberHeaderFont;
+	src: url("AgencyFB Regular.otf") format("opentype");
+}
+
+body, html {
+	margin: 0;
+	font-family: UberHeaderFont;
+	background: #333;
+}
+
+#header {
+	font: 45px UberHeaderFont;
+	text-align: center;
+	padding: 20px;
+	color: #fff;
+	background: #252621;
+}
+
+.column {
+	display: inline-block;
+	float: left;
+	width: 50%;
+}
+
+.title {
+	color: white;
+	font-size: 25px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#map-canvas {
+	height: 300px;
+}
+
+.content {
+	padding: 15px;
+	color: #333;
+	font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}
+
+#searchAddressContainer {
+	width: 100%;
+	position: relative;
+}
+
+#addresses, #searchContainer {
+	padding: 15px;
+	background: #252621;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#addresses {
+	font-size: 12px;
+	min-height: 118px;
+}
+
+#searchContainer {
+	padding: 20px;
+}
+
+input#searchAddress {
+	position: relative;
+	padding-right: 25px;
+}
+
+input#searchAddress,
+input#nickname,
+.address {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input#searchAddress,
+input#nickname {
+	width: 100%;
+	font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+	padding: 6px 7px;
+	margin-bottom: 5px;
+	outline: 0;
+	box-shadow: 0 0px 0 rgba(0,0,0,1),inset 0 1px 0 rgba(34,25,25,.3);
+	border-radius: 3px;
+	border: solid 1px #E5E5E5;
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.3) 0px 0px 8px;
+}
+
+button#stopEdit,
+button#updateAddress,
+button#deleteAddress {
+	display: none;
+}
+
+#searchBtn {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	background-color: white;
+	border: 0;
+	cursor: pointer;
+}
+
+button.actionButton, .address {
+	border:0px;
+	box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	cursor: pointer;
+	color: white;
+	display:inline-block;
+	margin:5px;
+	max-width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+button.actionButton {
+	border-radius: 1px;
+	font-weight: normal;
+	margin-left: 0px;
+}
+
+.address {
+	border-radius: 999px;
+}
+
+.address span {
+	color: #efebdc;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+button.actionButton:hover { color: #d1dbff; }
+
+.clear { clear: both; }
+
+.gradientOrange {
+	background-color: #fa0;
+	background-image: -moz-linear-gradient(#fa0, #EB8500);
+	background-image: -o-linear-gradient(#fa0, #EB8500);
+	background-image: -webkit-linear-gradient(#fa0, #EB8500);
+	background-image: linear-gradient(#fa0, #EB8500);
+}
+
+.gradientGreen {
+	background-color: #a0c12c;
+	background-image: -moz-linear-gradient(#a0c12c, #699315);
+	background-image: -o-linear-gradient(#a0c12c, #699315);
+	background-image: -webkit-linear-gradient(#a0c12c, #699315);
+	background-image: linear-gradient(#a0c12c, #699315);
+}
+
+.gradientBlue {
+	background-color: #fa0;
+	background-image: -moz-linear-gradient(#1451a0, #0e4893);
+	background-image: -o-linear-gradient(#1451a0, #0e4893);
+	background-image: -webkit-linear-gradient(#1451a0, #0e4893);
+	background-image: linear-gradient(#1451a0, #0e4893);
+}
+
+.gradientRed {
+	background-color: #c00;
+	background-image: -moz-linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0));
+	background-image: -o-linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0));
+	background-image: -webkit-linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0));
+	background-image: linear-gradient(rgba(255,255,255,.2), rgba(255,255,255,0));
+}
+
+/* mobile/tablet friendly */
+@media (max-width: 600px) {
+	.column {
+		width:100%;
+		float:none;
+	}
+}
